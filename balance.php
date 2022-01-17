@@ -23,6 +23,7 @@ if(isset($data['do_Balance'])) {
     $balance = (int)$data['Balance'];
     $raschet = $nowbalance + $balance;
 
+    
     }
 
     
