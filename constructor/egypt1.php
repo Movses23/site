@@ -224,7 +224,16 @@ echo $rezylt;
 
 ?>
 <script>
-
+function confirmq() {
+    if (confirm("Купить на сумму <?php $a = $countryname->price; $b = 0; $c = 0; $d = 0; $i = 0; $a1 = 'Нет'; $b1 = 'Нет'; $c1 = 'Нет'; $d1 = 'Нет'; $i1 = 'Нет'; if(($_POST['ListBox']) == 'Каир') { $b = $cityname1->price; $b1 = 'Каир'; } if(($_POST['ListBox']) == 'Александрия') { $b = $cityname2->price; $b1 = 'Александрия'; } if(($_POST['ListBox']) == 'Гиза') { $b = $cityname3->price; $b1 = 'Гиза'; } if(($_POST['ListBox1']) == 'Обычного класса') { $c = $hotelname1->price; $c1 = 'Обычного класса'; } if(($_POST['ListBox1']) == 'Среднего класса') { $c = $hotelname2->price; $c1 = 'Среднего класса'; } if(($_POST['ListBox1']) == 'Высокого класса') { $c = $hotelname3->price; $c1 = 'Высокого класса'; } if(($_POST['ListBox2']) == 'Нет') { $d = $exname1->price; $d1 = 'Нет'; } if(($_POST['ListBox2']) == 'Личный гид на один день') { $d = $exname2->price; $d1 = 'Личный гид на один день'; } if(($_POST['ListBox2']) == 'Оазис Бахария из Каира') { $d = $exname3->price; $d1 = 'Оазис Бахария из Каира'; } if(($_POST['ListBox2']) == 'В Луксор на самолёте') { $d = $exname4->price; $d1 = 'В Луксор на самолёте'; } if(($_POST['ListBox3']) == '5') { $i = 5; $i1 = '5'; } if(($_POST['ListBox3']) == '7') { $i = 7; $i1 = '7'; } if(($_POST['ListBox3']) == '14') { $i = 14; $i1 = '14'; } if(($_POST['ListBox3']) == '21') { $i = 21; $i1 = '21'; } if(($_POST['ListBox3']) == '30') { $i = 30; $i1 = '30'; } $rezylt = (int)$a + (int)$b + (int)$d + (int)$c * (int)$i; echo $rezylt; ?> ?")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+</script>
+<button type="submit" name="raschet" id="raschet" onclick="return confirmq();">Расчитать</button></p>
+<script>
 function confirmSpelll() {
     if (confirm("Купить на сумму <?php echo $rezylt ?> ?")) {
         return true;
@@ -233,7 +242,6 @@ function confirmSpelll() {
     }
 }
 </script>
-<button type="submit" name="raschet" id="raschet" >Расчитать</button></p>
 <button type="submit" name="do_bay" id="do_bay" onclick="return confirmSpelll();">Купить</button></p>
 </FORM>
 <?php
