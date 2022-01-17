@@ -84,51 +84,53 @@ $ex4 = $exname4->name;
 </div>
 
 <!-- ВЫБОРКА -->
+
+
+
+<FORM action='egypt1.php' method='post' >
+<h3> Выберите город: </h3>
+<SELECT name='ListBox' id='ListBox' >
+
+
+<OPTION selected><?php echo $city1?></OPTION>
+<OPTION><?php echo $city2?></OPTION>
+<OPTION><?php echo $city3?></OPTION>
+
+</SELECT><br><br>
+
+
+<h3> Выберите отель: </h3>
+<SELECT name='ListBox1' id='ListBox1'>
+<OPTION selected><?php echo $hotel1?></OPTION>
+<OPTION ><?php echo $hotel2?></OPTION>
+<OPTION ><?php echo $hotel3?></OPTION>
+</SELECT><br><br>
+
+
+<h3> Выберите кол-во экскурсий: </h3>
+<SELECT name='ListBox2' id='ListBox2'>
+<OPTION selected><?php echo $ex1?></OPTION>
+<OPTION><?php echo $ex2?></OPTION>
+<OPTION><?php echo $ex3?></OPTION>
+<OPTION><?php echo $ex4?></OPTION>
+</SELECT><br><br>
+
 <?php
-
-
-echo "<FORM action='egypt1.php' method='post' >";
-echo "<h3> Выберите город: </h3>";
-echo "<SELECT name='ListBox' id='ListBox' >";
-
-
-echo "<OPTION selected>$city1</OPTION>";
-echo "<OPTION>$city2</OPTION>";
-echo "<OPTION>$city3</OPTION>";
-
-echo "</SELECT><br><br>";
-
-
-echo "<h3> Выберите отель: </h3>";
-echo "<SELECT name='ListBox1' id='ListBox1'>";
-echo "<OPTION selected>$hotel1</OPTION>";
-echo "<OPTION >$hotel2</OPTION>";
-echo "<OPTION >$hotel3</OPTION>";
-echo "</SELECT><br><br>";
-
-
-echo "<h3> Выберите кол-во экскурсий: </h3>";
-echo "<SELECT name='ListBox2' id='ListBox2'>";
-echo "<OPTION selected>$ex1</OPTION>";
-echo "<OPTION>$ex2</OPTION>";
-echo "<OPTION>$ex3</OPTION>";
-echo "<OPTION>$ex4</OPTION>";
-echo "</SELECT><br><br>";
-
 $Day5egypt="5";
 $Day7egypt="7";
 $Day14egypt="14";
 $Day21egypt="21";
 $Day30egypt="30";
-echo "<h3> Выберите кол-во дней: </h3>";
-echo "<SELECT name='ListBox3' id='ListBo3'>";
-echo "<OPTION selected>$Day5egypt</OPTION>";
-echo "<OPTION>$Day7egypt</OPTION>";
-echo "<OPTION>$Day14egypt</OPTION>";
-echo "<OPTION>$Day21egypt</OPTION>";
-echo "<OPTION>$Day30egypt</OPTION>";
-echo "</SELECT><br><br>";
-
+?>
+<h3> Выберите кол-во дней: </h3>
+<SELECT name='ListBox3' id='ListBo3'>
+<OPTION selected><?php echo $Day5egypt?></OPTION>
+<OPTION><?php echo $Day7egypt?></OPTION>
+<OPTION><?php echo $Day14egypt?></OPTION>
+<OPTION><?php echo $Day21egypt?></OPTION>
+<OPTION><?php echo $Day30egypt?></OPTION>
+</SELECT><br><br>
+<?php
 $a = $countryname->price;
 $b = 0;
 $c = 0;
@@ -217,6 +219,8 @@ $i1 = 'Нет';
 		$i1 = '30';			
     }
 $rezylt = (int)$a + (int)$b + (int)$d + (int)$c * (int)$i;
+echo $rezylt;
+
 
 ?>
 <script>
@@ -229,6 +233,7 @@ function confirmSpelll() {
     }
 }
 </script>
+<button type="submit" name="raschet" id="raschet" >Расчитать</button></p>
 <button type="submit" name="do_bay" id="do_bay" onclick="return confirmSpelll();">Купить</button></p>
 </FORM>
 <?php
@@ -238,7 +243,6 @@ if(isset($data['do_bay']))
 {
 		$books = R::load('users', $id);
         (int)$nowbalance = $books->balance;
-		$rezylt = (int)$a + (int)$b + (int)$d + (int)$c * (int)$i;
 	    if($nowbalance < $rezylt){
         echo '<div style="color: red; ">Недостаточно средств</div><hr>';
         echo '<form action="..\lk.php"><button>Назад</button></p>';
@@ -259,7 +263,6 @@ if(isset($data['do_bay']))
 
 }
 ?>
-
 
 
 
