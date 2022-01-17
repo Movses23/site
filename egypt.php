@@ -36,6 +36,7 @@ if($nowbalance < $priceturs){
 	echo '<div class="success">Вы успешно купили тур '.$title.'</div><hr class="success_border">';
 	echo '<form action="lk.php"><button>Вернуться в ЛК</button></p>';
 	return;
+	
 }
 ?>
 
