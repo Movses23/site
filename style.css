@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F7CE;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sav {
+
+    height: 100px
+}
+
+.button1,
+.button2 {
+
+    color: #484848;
+    text-transform: uppercase;
+    border: 2px solid #484848;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #A1BACD
+}
+
+.button2 {
+    margin-left: 50px;
+}
+
+.button1:hover {
+    background: #fff;
+}
+
+.button2:hover {
+    background: #fff;
+}
+
+.button {
+    float: right;
+    margin-top: 30px;
+}
+
+.heading {
+    text-align: center;
+}
+
+form {
+    display: inline-grid;
+    margin: 40px 490px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #D7D9D8;
+    font-size: 15px;
+    padding: 10px;
+    width: 250px;
+}
+
+.col {
+    background-color: #F8F7CE;
+}
+
+.button3,
+.button4,
+.button5,
+.button6 {
+    color: #484848;
+    text-transform: uppercase;
+    border: 2px solid #484848;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #A1BACD;
+
+
+}
+
+.button3:hover,
+.button5:hover,
+.button6:hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.paragraph {
+    text-align: center;
+    font-size: 18px;
+}
+
+.link,
+.link1,
+.link2,
+.link3 {
+    text-decoration: none;
+    color: #5C98C7;
+}
+
+
+.link1 {
+    margin-left: 10px;
+}
+
+.link2 {
+    margin-top: 15px;
+
+
+}
+
+.success {
+    text-align: center;
+    font-size: 20px;
+    color: #484848;
+}
+
+.success_border {
+    border: 3px solid #484848;
+}
+
+.button_cont {
+    margin-top: 20px;
+}
+
+.button4 {
+    margin-left: 15px;
+}
+
+.lk1,
+.lk2,
+.lk3 {
+    margin: 20px 0px;
+    display: block;
+}
+
+.button5 {
+    margin-top: 10px;
+}
+
+.text1 {
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+.text1:hover {
+    text-decoration-line: underline;
+    color: #5C98C7;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 19px;
+}
+
+.container-small {
+    width: 600px;
+    margin: auto;
+}
+
+.row1 {
+    margin-top: 40px;
+}
+
+
+
+.photo {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.pic {
+    width: 50%;
+    margin: 10px 20px 10px 290px;
+}
+
+.button6 {
+    margin-left: 220px;
+}
+
+.link3 {
+    margin-left: -20px;
+    font-size: 25px;
+}
+
+.price {
+    margin-top: 10px;
+    border: 2px solid #D7D9D8;
+    border-radius: 10px;
+    color: #484848;
+    padding: 1px;
+    background-color: red;
+
+
+}
+
+.paragraph_indent {
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0;
+}
